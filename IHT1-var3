@@ -1,0 +1,123 @@
+#include <stdio.h>
+
+#include <string.h>
+
+int deg2(short deg){
+
+  int result=2;
+
+  if(deg=0){
+
+    return 1;
+
+  }
+
+  for(short i=1;i<deg;i++){
+
+    result=result*2;
+
+  }
+
+  return result;
+
+}
+
+
+int bin_perevod(char arg1[]){
+
+  char len=sizeof(arg1);
+
+  //printf("%с razmer",len);
+
+  int summ=0;
+
+  char counter=0;
+
+  for(char i=len-1;i>0;i--){
+
+    printf("\n1%d",summ);
+
+    summ=summ+(deg2(counter)*arg1[i]);
+
+    counter++;
+
+    
+
+  }
+
+  return summ;
+
+}
+
+int main(void){
+
+  //char str1[5]={1,0,1,0,1};
+
+  //printf("%d",bin_perevod(str1));
+
+  char input;
+
+  int decimal[];
+
+  char binar[];
+
+  char processing[];
+
+  char counter1=0;
+
+  char counter2=0;
+
+  char counter3=0;
+
+  while ((input=getchar())!=-1)
+
+ {
+
+   binar[counter3]=input;
+
+   counter3++;
+
+   if(isspace(input)!=true)
+
+     {
+
+        
+
+        processing[counter1]=input;
+
+        counter1++;
+
+        
+
+     }
+
+   else{
+
+   decimal[counter2]=bin_perevod(processing);
+
+counter2++;
+
+memset(processing,0,strlen(processing));
+
+counter1=0;
+
+
+
+}
+
+
+
+  }
+
+for(int j=0;j<strlen(binar);j++)
+
+{
+
+printf("%d",decimal[j]);
+
+}
+
+
+}
+
+
