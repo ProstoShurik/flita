@@ -1,15 +1,7 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-
 int deg2(short deg){
   int result=2;
   if(deg==0){
@@ -35,7 +27,7 @@ int bin_perevod(char arg1[]){
 
 int main(void){
   char input;
-  int decimal[128]; char binar[100]; char processing[128];
+  int decimal[128];  char processing[128];
   char counter1=0 ;char counter2=0; char counter3=0 ;char counted=0;
   while ((input=getchar())!='\n'){
    if(input!=' '){
