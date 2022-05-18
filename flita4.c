@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define MAX_BOARD 100
+#define MATRIX_LEN 100
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,7 +28,7 @@ int main() {
     fclose(file);
 
     s = counter;
-    int matrix[100][2];
+    int matrix[MATRIX_LEN][2];
     int count_arr[MAX_BOARD] = { 0 };
     int i, j;
     FILE* file1 = fopen("list_of_edges90.txt", "r"); //90 для всякого безобразия,а остальные-норм.
